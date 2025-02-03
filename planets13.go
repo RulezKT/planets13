@@ -76,6 +76,8 @@ func (pl *Pl13) Load(dir string) {
 	pl.chiron = floatsfile.LoadBinary(filepath.Join(dir, CHIRON_FILE), CHIRON_LENGTH)
 }
 
+// gets equatorial rectangular coordinates for equinox J2000 with respect to the Earth
+// функция считает планеты относительно Земли
 func (pl *Pl13) Calc(seconds float64) []types.Position {
 
 	// earth barycenter
